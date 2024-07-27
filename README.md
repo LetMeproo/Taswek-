@@ -22,4 +22,4 @@ Taswek is a comprehensive e-commerce platform designed to facilitate online shop
    ```bash
    git clone https://github.com/LetMeproo/taswek.git
 
-  # live website : 
+  # live website : https://letmeproo.github.io/Taswek-/
