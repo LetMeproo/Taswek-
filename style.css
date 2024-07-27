@@ -1,0 +1,389 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Zain:wght@200;300;400;700;800;900&display=swap');
+
+/* style.css */
+body {
+    background: linear-gradient(to right, #123, #155); /* تدرج الألوان للخلفية */
+    font-family: 'Zain', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    direction: rtl;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    z-index: 1000; 
+    
+}
+
+.navbar .navbar-brand{
+    color: #FFB200;
+    font-size: 2em;
+}
+.navbar .navbar-brand:hover{
+    color: #123;
+    transition: 0.3s ease-in-out;
+}
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-left: 20px;
+}
+
+.navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+
+}
+.navbar-nav .nav-link {
+    margin-right: 10px;
+    font-weight: 600;
+    font-size: 1.6em;
+}
+#search-results {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#search-results li {
+    cursor: pointer;
+}
+
+.carousel-fade .carousel-item {
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 7s ease;
+}
+
+.carousel-fade .carousel-item.active {
+    opacity: 1;
+}
+
+.btn-outline-success{
+    border: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-size: 1.8em;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+.card {
+    width: 18rem;
+    margin: 20px;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.5s ease-in-out;
+}
+.card:hover{
+    margin-bottom: 2px;
+    transition: 0.5s ease-in-out;
+}
+
+.card img {
+    height: 200px;
+    object-fit: fill;
+}
+
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.title-for-cards{
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #eee;
+    text-align: center;
+}
+
+footer {
+    padding: 20px 0;
+}
+
+footer .container {
+    max-width: 100%;
+}
+
+footer h5 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+footer p{
+    text-align: center;
+    font-size: 1.7em;
+}
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+footer ul li a {
+    color: #343a40;
+    transition: color 0.3s;
+}
+
+footer ul li a:hover {
+    color: #007bff !important;
+}
+
+footer .bg-dark {
+    background-color: #343a40 !important;
+}
+
+footer .text-white {
+    color: #fff !important;
+}
+
+/* styles for cyrcle  */
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.circle {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.circle-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    box-sizing: border-box;
+}
+
+.circle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 5px solid #eee;
+    clip: rect(0, 75px, 150px, 0);
+    animation: rotate 2s linear infinite;
+}
+
+.circle::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    
+    clip: rect(0, 150px, 150px, 75px);
+    transform: rotate(0deg);
+    animation: rotate 2s linear infinite;
+}
+
+.number {
+    font-size: 2em;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    color: #FFB200;
+}
+
+p {
+    margin-top: 10px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    color: #FFB200;
+}
+.cicl-text {
+    margin-bottom: 40px;
+    color: #eee;
+    text-align: center;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+
+
+/* تحسين شكل أيقونة السلة */
+.btn-outline-primary {
+    border: none;
+    background-color: transparent;
+}
+.btn-outline-primary:hover{
+    background-color: #28a745;
+}
+
+.btn-outline-primary i {
+    font-size: 1.5em;
+    color: #123;
+}
+
+/* تحسين شكل زر "أضف إلى السلة" */
+.add-to-cart {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 5px;
+}
+
+.add-to-cart:hover {
+    background-color: #218838;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+    .circle {
+        width: 100px;
+        height: 100px;
+    }
+
+    .number {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+@media (max-width: 600px) {
+    .circle {
+        width: 100px;
+        height: 100px;
+    }
+
+    .number {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+}
+
+
+
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .circle {
+        width: 100px;
+        height: 100px;
+    }
+
+    .number {
+        font-size: 1.5em;
+    }
+    .circle {
+        width: 100px;
+        height: 100px;
+    }
+
+    .number {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .navbar-nav {
+        text-align: center;
+        
+    }
+
+    .navbar-toggler {
+        margin-left: auto;
+    }
+    .navbar-toggler{
+        position: fixed;
+        left: 2px;
+        top: 18px;
+    }
+    .carousel-fade{
+        margin-top: 40px;
+    }
+    .container-fluid{
+        display: flex;
+        align-items: center;
+    }
+}
+
+
